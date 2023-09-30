@@ -2,10 +2,37 @@
 
 Adds data and models for all countries, languages and timezones.
 
-## Getting started
+## Installing the package and adding the data
 
-1. `composer require michielvaneerd/laravel-country-info:main-dev`
-2. `php artisan migrate`
-3. `php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\CountrySeeder"`
+First install the package:
 
-Now you can use the classes and get the info.
+`composer require michielvaneerd/laravel-country-info:main-dev`
+
+Then run the migration - this will create 3 tables: mvr_countries, mve_locales and mve_timezones:
+
+`php artisan migrate`
+
+The run the seeders.
+
+Always first run the country seeder, because the locale and timezone seeders depend on it.
+
+`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\CountrySeeder"`
+
+If you don't need locales or timezones, you can of course skip them.
+
+`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\LocaleSeeder"`
+
+`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\TimezoneSeeder"`
+
+## Using the package
+
+```
+use Michielvaneerd\CountryInfo\Models\Country;
+
+$country = Country::first();
+
+$locales = $country->locales;
+
+$timezones = $country->timezones;
+
+```
