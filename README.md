@@ -6,7 +6,7 @@ Adds data and models for all countries, languages and timezones.
 
 First install the package:
 
-`composer require michielvaneerd/laravel-country-info:main-dev`
+`composer require michielvaneerd/laravel-country-info`
 
 Then run the migration - this will create 3 tables: mvr_countries, mve_locales and mve_timezones:
 
