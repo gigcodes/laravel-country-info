@@ -4,7 +4,7 @@ namespace Michielvaneerd\CountryInfo\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Michielvaneerd\CountryInfo\Country;
+use Michielvaneerd\CountryInfo\Models\Country;
 
 class CountrySeeder extends Seeder
 {
