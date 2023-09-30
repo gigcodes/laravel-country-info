@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('timezones', function (Blueprint $table) {
+        Schema::create('mve_timezones', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('timezones');
+        Schema::dropIfExists('mve_timezones');
     }
 };

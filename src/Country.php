@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    public function getName()
-    {
-        return 'Hoi allemaal!';
-    }
+    protected $table = 'mve_countries';
+
+    protected $fillable = [
+        'code',
+        'title'
+    ];
 }

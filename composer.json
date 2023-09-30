@@ -2,7 +2,8 @@
     "name": "michielvaneerd/laravel-country-info",
     "autoload": {
         "psr-4": {
-            "Michielvaneerd\\CountryInfo\\": "src/"
+            "Michielvaneerd\\CountryInfo\\": "src/",
+            "Michielvaneerd\\CountryInfo\\Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "authors": [
