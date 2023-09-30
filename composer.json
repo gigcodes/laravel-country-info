@@ -1,5 +1,5 @@
 {
-    "name": "michielvaneerd/country-info",
+    "name": "michielvaneerd/laravel-country-info",
     "autoload": {
         "psr-4": {
             "Michielvaneerd\\CountryInfo\\": "src/"
