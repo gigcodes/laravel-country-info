@@ -1,5 +1,6 @@
 {
     "name": "michielvaneerd/laravel-country-info",
+    "description": "Adds country, language and timezone data and ORM models.",
     "autoload": {
         "psr-4": {
             "Michielvaneerd\\CountryInfo\\": "src/",
@@ -8,10 +9,13 @@
     },
     "authors": [
         {
-            "name": "Michiel van Eerd"
+            "name": "Michiel van Eerd",
+            "email": "michiel.vaneerd@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=8.1"
+    },
     "extra": {
         "laravel": {
             "providers": [
