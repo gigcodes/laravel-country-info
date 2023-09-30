@@ -1,6 +1,7 @@
 {
     "name": "michielvaneerd/laravel-country-info",
     "description": "Adds country, language and timezone data and ORM models.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Michielvaneerd\\CountryInfo\\": "src/",
