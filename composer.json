@@ -1,0 +1,21 @@
+{
+    "name": "michielvaneerd/country-info",
+    "autoload": {
+        "psr-4": {
+            "Michielvaneerd\\CountryInfo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michiel van Eerd"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Michielvaneerd\\CountryInfo\\Providers\\CountryInfoServiceProvider"
+            ]
+        }
+    }
+}
