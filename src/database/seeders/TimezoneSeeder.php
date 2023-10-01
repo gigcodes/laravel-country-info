@@ -47,7 +47,8 @@ class TimezoneSeeder extends Seeder
                 } else {
                     $newTimezone = Timezone::create([
                         'name' => $name,
-                        'country_id' => $country->id
+                        'country_id' => $country->id,
+                        'enabled' => 'N'
                     ]);
                     $existingTimezones->put($name, $newTimezone);
                 }

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('mve_timezones', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->enum('enabled', ['Y', 'N'])->index();
             $table->unsignedBigInteger('country_id');
             $table->timestamps();
             $table->foreign('country_id')->references('id')->on('mve_countries');

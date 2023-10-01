@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->string('title');
+            $table->enum('enabled', ['Y', 'N'])->index();
             $table->unsignedBigInteger('country_id');
             $table->timestamps();
             $table->foreign('country_id')->references('id')->on('mve_countries');

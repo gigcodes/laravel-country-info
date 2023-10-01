@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('mve_countries', function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
+            $table->enum('enabled', ['Y', 'N'])->index();
             $table->string('title');
             $table->timestamps();
         });

@@ -40,7 +40,7 @@ class CountrySeeder extends Seeder
                         $country->update(['title' => $title]);
                     }
                 } else {
-                    Country::create(['code' => $code, 'title' => $title]);
+                    Country::create(['code' => $code, 'title' => $title, 'enabled' => 'N']);
                 }
             }
             fclose($fh);
