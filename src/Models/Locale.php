@@ -11,7 +11,8 @@ class Locale extends Model
     protected $fillable = [
         'country_id',
         'code',
-        'title'
+        'title',
+        'enabled'
     ];
 
     public function country()

@@ -10,7 +10,8 @@ class Timezone extends Model
 
     protected $fillable = [
         'country_id',
-        'name'
+        'name',
+        'enabled'
     ];
 
     public function country()

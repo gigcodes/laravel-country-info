@@ -10,7 +10,8 @@ class Country extends Model
 
     protected $fillable = [
         'code',
-        'title'
+        'title',
+        'enabled'
     ];
 
     public function locales()
