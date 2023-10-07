@@ -41,7 +41,7 @@ class LocalesList extends Command
      */
     public function handle()
     {
-        $query = Locale::join('mve_countries', 'mve_locales.country_id', '=', 'mve_countries.id');
+        $query = Locale::leftJoin('mve_countries', 'mve_locales.country_id', '=', 'mve_countries.id');
 
         $enabled = $this->option('enabled');
         if (!empty($enabled)) {

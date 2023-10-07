@@ -1,10 +1,12 @@
 # Laravel Country Info package
 
-Provides country, language and timezone information to your Laravel project.
+Provides country, locales/languages and timezone information to your Laravel project.
 
 After running the migration and seeders, you will have 3 tables filled with the countries of the world, their locales and timezones.
 
 Each table corresponds to a model you can use in your code. Below you find the models and their properties.
+
+_Note: A locale is a language that is spoken in a specific country, like English UK or English US. A language is just English or French._
 
 ## Data
 
@@ -19,7 +21,7 @@ Properties:
 
 Properties:
 
-- Country - country this locale belongs to
+- Country - country this locale belongs to (only for locales, not for languages)
 - Code - format is like `nl-NL` or `en-GB`
 - Title - English name, like `Afrikaans / Namibia`
 
@@ -49,6 +51,11 @@ If you don't need locales or timezones, you can of course skip them.
 `php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\LocaleSeeder"`
 
 `php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\TimezoneSeeder"`
+
+If you also want languages (locale without country) to be added. These are languages like _en_ or _nl_ so without the country attached to it.
+Of course they also don't have a country relation.
+
+`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\LanguageSeeder"`
 
 ## Enable or disable countries, locales and timezones
 
