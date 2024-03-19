@@ -1,10 +1,10 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Database\Seeders;
+namespace Gigcodes\CountryInfo\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Michielvaneerd\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Country;
 
 class CountrySeeder extends Seeder
 {

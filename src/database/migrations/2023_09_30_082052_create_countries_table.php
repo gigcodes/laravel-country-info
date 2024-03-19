@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mve_locales', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
-            $table->string('title');
             $table->enum('enabled', ['Y', 'N'])->index();
-            $table->unsignedBigInteger('country_id')->nullable();
+            $table->string('title');
             $table->timestamps();
-            $table->foreign('country_id')->references('id')->on('mve_countries');
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mve_locales');
+        Schema::dropIfExists('countries');
     }
 };

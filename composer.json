@@ -1,17 +1,17 @@
 {
-    "name": "michielvaneerd/laravel-country-info",
+    "name": "gigcodes/laravel-country-info",
     "description": "Adds country, language and timezone data and ORM models.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Michielvaneerd\\CountryInfo\\": "src/",
-            "Michielvaneerd\\CountryInfo\\Database\\Seeders\\": "src/database/seeders/"
+            "Gigcodes\\CountryInfo\\": "src/",
+            "Gigcodes\\CountryInfo\\Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "authors": [
         {
-            "name": "Michiel van Eerd",
-            "email": "michiel.vaneerd@gmail.com"
+            "name": "Karthick",
+            "email": "karthick@gigcodes.com"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Michielvaneerd\\CountryInfo\\Providers\\CountryInfoServiceProvider"
+                "Gigcodes\\CountryInfo\\Providers\\CountryInfoServiceProvider"
             ]
         }
     }

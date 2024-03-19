@@ -1,10 +1,10 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Commands;
+namespace Gigcodes\CountryInfo\Commands;
 
 use Illuminate\Console\Command;
-use Michielvaneerd\CountryInfo\Models\Country;
-use Michielvaneerd\CountryInfo\Models\Timezone;
+use Gigcodes\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Timezone;
 
 class TimezonesEdit extends Command
 {
@@ -18,7 +18,7 @@ class TimezonesEdit extends Command
      *
      * @var string
      */
-    protected $signature = 'mve:timezones-edit
+    protected $signature = 'gigcodes:timezones-edit
         {--countries= : Optional countries, separated by comma, required if codes if empty}
         {--names= : Timezone names separated by a comma, required if country is empty}
         {--enable= : Can be one of Y, N}';

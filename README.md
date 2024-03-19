@@ -34,9 +34,9 @@ Properties:
 
 First install the package:
 
-`composer require michielvaneerd/laravel-country-info`
+`composer require gigcodes/laravel-country-info`
 
-Then run the migration - this will create 3 tables: mvr_countries, mve_locales and mve_timezones:
+Then run the migration - this will create 3 tables: mvr_countries, locales and timezones:
 
 `php artisan migrate`
 
@@ -44,18 +44,18 @@ The run the seeders.
 
 Always first run the country seeder, because the locale and timezone seeders depend on it.
 
-`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\CountrySeeder"`
+`php artisan db:seed --class="Gigcodes\\CountryInfo\\Database\\Seeders\\CountrySeeder"`
 
 If you don't need locales or timezones, you can of course skip them.
 
-`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\LocaleSeeder"`
+`php artisan db:seed --class="Gigcodes\\CountryInfo\\Database\\Seeders\\LocaleSeeder"`
 
-`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\TimezoneSeeder"`
+`php artisan db:seed --class="Gigcodes\\CountryInfo\\Database\\Seeders\\TimezoneSeeder"`
 
 If you also want languages (locale without country) to be added. These are languages like _en_ or _nl_ so without the country attached to it.
 Of course they also don't have a country relation.
 
-`php artisan db:seed --class="Michielvaneerd\\CountryInfo\\Database\\Seeders\\LanguageSeeder"`
+`php artisan db:seed --class="Gigcodes\\CountryInfo\\Database\\Seeders\\LanguageSeeder"`
 
 ## Enable or disable countries, locales and timezones
 
@@ -69,60 +69,60 @@ This flag can be set with Artisan commands.
 
 List all countries:
 
-`mve:countries-list`
+`gigcodes:countries-list`
 
 List enabled or disabled countries:
 
-`mve:countries-list --enabled=Y`
+`gigcodes:countries-list --enabled=Y`
 
-`mve:countries-list --enabled=N`
+`gigcodes:countries-list --enabled=N`
 
 Order countries by code or title:
 
-`mve:countries-list --order=code`
+`gigcodes:countries-list --order=code`
 
-`mve:countries-list --order=title`
+`gigcodes:countries-list --order=title`
 
 Enable or disable countries:
 
-`mve:countries-edit --enable=Y --codes=FR,NL`
+`gigcodes:countries-edit --enable=Y --codes=FR,NL`
 
-`mve:countries-edit --enable=N --codes=FR,NL`
+`gigcodes:countries-edit --enable=N --codes=FR,NL`
 
 ### Locales
 
 Display enabled locales for the Netherlands and France and order them by code:
 
-`mve:locales-list --enabled=Y --order=code --countries=NL,FR`
+`gigcodes:locales-list --enabled=Y --order=code --countries=NL,FR`
 
 Enable some languages:
 
-`mve:locales-edit --enable=Y --codes=en-GB,nl-NL`
+`gigcodes:locales-edit --enable=Y --codes=en-GB,nl-NL`
 
 Enable all languages for a specific country:
 
-`mve:locales-edit --enable=Y --countries=GB,NL`
+`gigcodes:locales-edit --enable=Y --countries=GB,NL`
 
 ### Timezones
 
 Display enabled timezones for the Netherlands and France and order them by name:
 
-`mve:timezones-list --enabled=Y --order=name --countries=NL,FR`
+`gigcodes:timezones-list --enabled=Y --order=name --countries=NL,FR`
 
 Enable some timezones:
 
-`mve:timezones-edit --enable=Y --names="Europe/Amsterdam,Europe/Paris"`
+`gigcodes:timezones-edit --enable=Y --names="Europe/Amsterdam,Europe/Paris"`
 
 Enable all languages for a specific country:
 
-`mve:timezones-edit --enable=Y --countries=GB,NL`
+`gigcodes:timezones-edit --enable=Y --countries=GB,NL`
 
 ## Using the package
 
 ```
-use Michielvaneerd\CountryInfo\Models\Country;
-use Michielvaneerd\CountryInfo\Models\Locale;
-use Michielvaneerd\CountryInfo\Models\Timezone;
+use Gigcodes\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Locale;
+use Gigcodes\CountryInfo\Models\Timezone;
 
 // Get one specific country
 $country = Country::where('code', 'GB')->first();

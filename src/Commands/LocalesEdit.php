@@ -1,11 +1,11 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Commands;
+namespace Gigcodes\CountryInfo\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Michielvaneerd\CountryInfo\Models\Country;
-use Michielvaneerd\CountryInfo\Models\Locale;
+use Gigcodes\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Locale;
 
 class LocalesEdit extends Command
 {
@@ -19,7 +19,7 @@ class LocalesEdit extends Command
      *
      * @var string
      */
-    protected $signature = 'mve:locales-edit
+    protected $signature = 'gigcodes:locales-edit
         {--countries= : Optional countries, separated by comma, required if codes if empty}
         {--codes= : Locales codes separated by a comma}
         {--enable= : Can be one of Y, N}';

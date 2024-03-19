@@ -1,9 +1,9 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Commands;
+namespace Gigcodes\CountryInfo\Commands;
 
 use Illuminate\Console\Command;
-use Michielvaneerd\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Country;
 
 class CountriesList extends Command
 {
@@ -22,7 +22,7 @@ class CountriesList extends Command
      *
      * @var string
      */
-    protected $signature = 'mve:countries-list
+    protected $signature = 'gigcodes:countries-list
         {--enabled= : Which items to list (optional): Y, N}
         {--order=code : Ordering, can be one of code, title}';
 

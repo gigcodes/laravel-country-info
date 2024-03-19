@@ -1,12 +1,12 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Models;
+namespace Gigcodes\CountryInfo\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Locale extends Model
 {
-    protected $table = 'mve_locales';
+    protected $table = 'locales';
 
     protected $fillable = [
         'country_id',

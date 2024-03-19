@@ -1,9 +1,9 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Commands;
+namespace Gigcodes\CountryInfo\Commands;
 
 use Illuminate\Console\Command;
-use Michielvaneerd\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Country;
 
 class CountriesEdit extends Command
 {
@@ -17,7 +17,7 @@ class CountriesEdit extends Command
      *
      * @var string
      */
-    protected $signature = 'mve:countries-edit
+    protected $signature = 'gigcodes:countries-edit
         {--codes= : Country codes separated by a comma}
         {--enable= : Can be one of Y, N}';
 

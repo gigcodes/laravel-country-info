@@ -1,14 +1,14 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Providers;
+namespace Gigcodes\CountryInfo\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Michielvaneerd\CountryInfo\Commands\CountriesEdit;
-use Michielvaneerd\CountryInfo\Commands\CountriesList;
-use Michielvaneerd\CountryInfo\Commands\LocalesEdit;
-use Michielvaneerd\CountryInfo\Commands\LocalesList;
-use Michielvaneerd\CountryInfo\Commands\TimezonesEdit;
-use Michielvaneerd\CountryInfo\Commands\TimezonesList;
+use Gigcodes\CountryInfo\Commands\CountriesEdit;
+use Gigcodes\CountryInfo\Commands\CountriesList;
+use Gigcodes\CountryInfo\Commands\LocalesEdit;
+use Gigcodes\CountryInfo\Commands\LocalesList;
+use Gigcodes\CountryInfo\Commands\TimezonesEdit;
+use Gigcodes\CountryInfo\Commands\TimezonesList;
 
 class CountryInfoServiceProvider extends ServiceProvider
 {

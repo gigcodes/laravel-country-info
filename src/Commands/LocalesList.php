@@ -1,10 +1,10 @@
 <?php
 
-namespace Michielvaneerd\CountryInfo\Commands;
+namespace Gigcodes\CountryInfo\Commands;
 
 use Illuminate\Console\Command;
-use Michielvaneerd\CountryInfo\Models\Country;
-use Michielvaneerd\CountryInfo\Models\Locale;
+use Gigcodes\CountryInfo\Models\Country;
+use Gigcodes\CountryInfo\Models\Locale;
 
 class LocalesList extends Command
 {
@@ -24,7 +24,7 @@ class LocalesList extends Command
      *
      * @var string
      */
-    protected $signature = 'mve:locales-list
+    protected $signature = 'gigcodes:locales-list
         {--countries= : Country codes, separated by comma (optional)}
         {--enabled= : Which items to list (optional): Y, N}
         {--order=code : Order (optional): code, title, country}';
@@ -41,7 +41,7 @@ class LocalesList extends Command
      */
     public function handle()
     {
-        $query = Locale::leftJoin('mve_countries', 'mve_locales.country_id', '=', 'mve_countries.id');
+        $query = Locale::leftJoin('countries', 'locales.country_id', '=', 'countries.id');
 
         $enabled = $this->option('enabled');
         if (!empty($enabled)) {
@@ -51,10 +51,10 @@ class LocalesList extends Command
             }
             switch ($enabled) {
                 case self::ENABLED_Y:
-                    $query->where('mve_locales.enabled', 'Y');
+                    $query->where('locales.enabled', 'Y');
                     break;
                 case self::ENABLED_N:
-                    $query->where('mve_locales.enabled', 'N');
+                    $query->where('locales.enabled', 'N');
                     break;
             }
         }
@@ -73,7 +73,7 @@ class LocalesList extends Command
             $query->whereIn('country_id', $countryIds);
         }
 
-        $locales = $query->select('mve_locales.id', 'mve_locales.code', 'mve_locales.title', 'mve_locales.enabled', 'mve_countries.code as country')->orderBy($order)->get()->toArray();
+        $locales = $query->select('locales.id', 'locales.code', 'locales.title', 'locales.enabled', 'countries.code as country')->orderBy($order)->get()->toArray();
 
         $this->table(['id', 'code', 'title', 'enabled', 'country'], $locales);
         $this->line('Number of rows: ' . count($locales));
