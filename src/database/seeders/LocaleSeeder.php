@@ -87,7 +87,7 @@ class LocaleSeeder extends Seeder
                         'country_id' => $country->id,
                         'code' => $code,
                         'title' => $languages[$languageCode] . ' / ' . $country->title,
-                        'enabled' => 'N'
+                        'enabled' => 'Y'
                     ]);
                 }
             }

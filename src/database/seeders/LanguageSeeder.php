@@ -25,7 +25,7 @@ class LanguageSeeder extends Seeder
                     $titleParts = explode('/', $locale->title);
                     Locale::create([
                         'code' => $language,
-                        'enabled' => 'N',
+                        'enabled' => 'Y',
                         'country_id' => null,
                         'title' => trim($titleParts[0])
                     ]);
